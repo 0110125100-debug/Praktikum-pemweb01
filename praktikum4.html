@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CV sederhana-mahasiswa baru</title>
+   <style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      color: #0f172a;
+  }
+
+  header {
+      background-color: #2563eb;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+  }
+
+  nav {
+      margin-top: 10px;
+  }
+
+  nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+  }
+
+  nav a:hover {
+      text-decoration: underline;
+  }
+
+  /* Layout menggunakan float */
+  main {
+      margin: 20px;
+      overflow: auto;
+  }
+
+  section {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+  }
+
+  #konten {
+      float: left;
+      width: 65%;
+  }
+
+  #sidebar {
+      float: right;
+      width: 30%;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px;
+  }
+
+  footer {
+      clear: both;
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+  }
+
+  h2 {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 4px;
+  }
+
+  .tag {
+      display: inline-block;
+      background: #e0f2fe;
+      border-radius: 8px;
+      padding: 3px 8px;
+      font-size: 12px;
+      margin-right: 5px;
+  }
+
+  .frame {
+      width: 100%;
+      height: 200px;
+      border: 0;
+      border-radius: 6px;
+  }
+  
+
+  </style>
+</head>
+<body>
+  <header>
+   <h1>curriculum vitae</h1> 
+   <p> Nazka khaulah - mahsiswa baru</p>
+   <nav>
+     <a href="#profil">profil</a>
+     <a href="#pendidikan">pendidikan</a>
+     <a href="#kemampuan">kemampuan</a>
+     <a href="#kontak">kontak</a>
+   </nav>
+  </header>
+  <main>
+    <div id="konten">
+     <section id="profil">
+     <h2>profil</h2>
+     <p>Hallo saya!
+     <strong>Nazka khaulah</strong>,Mahasiswa baru yang tertarik pada <em>web development</em>, saya sedang mempelajari HTML,CSS, dan framework laravel
+     </p>
+     </section>
+     <section id="pendidikan"
+     <h2>pendidikan</h2>
+     <p><strong>sekolah alam bojonggede</strong>-(2011-2017)</p>
+     <p><strong>PPI 112 Bogor</strong>-(2017-2020)</p>
+     <p><strong>MA persis bogor</strong>-(2021-2025)</p>
+     <p><strong>STT-NF</strong>-(2025-sekarang)</p>
+     </section>
+     <section id="kemampuan">
+       <p>
+         <span class="tag">HTML
+         </span>
+         <span class="tag">CSS
+         </span>
+         <span class="tag">laravel
+        </span>
+       </p>
+       <h2>kemampuan</h2>
+     </section>
+     <section id="kontak">
+       <h2>kontak</h2>
+       <p>Email:
+       <a href="mailto:nazkaaku@gmail.com">nazkaaku@gmail.com
+       </a>
+       </p>
+       <p> 
+        pratinjau
+         portofolio
+         </p>
+         <iframe class="iframe" src="https://www.wikipedia.org" tittle="contoh iframe">
+         </iframe>
+     </section>
+    </div>
+    <div id="sidebar">
+      <h2>tentang saya</h2>
+      <p>saya suka menggambar, memasak dan mendengarkan musik.</p>
+      <h3>hobi</h3>
+      <ul>
+        <li>menggambar</li>
+        <li>memasak</li>
+        <li>membuat kerajinan</li>
+      </ul>
+      <h3>bahasa</h3>
+        <ul>
+          <li>indonesia</li>
+          <li>inggris</li>
+        </ul>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Nazka Khaulah - CV ini dibuat dengan HTML, CSS, internal, dan layout float
+  </footer>
+</body>
+</html>
