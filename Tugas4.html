@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Fulan — Berita Koding Lucu Tapi Keren</title>
+  <!-- INTERNAL CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background-color: #fcfeff;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #355485;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      font-style: italic;
+      margin: 6px 0 0 0;
+    }
+
+    /* NAV */
+    nav {
+      background-color: #4f90c6;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* LAYOUT */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 20px auto;
+      overflow: auto;
+    }
+
+    section {
+      float: left;
+      width: 68%;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    aside {
+      float: right;
+      width: 28%;
+      background-color: #cbdde9;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #355485;
+      margin-top: 0;
+    }
+
+    article img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    /* TABEL DATA */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f1f5f9;
+    }
+
+    /* IFRAME */
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 1px solid #999;
+      border-radius: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      clear: both;
+      background-color: #355485;
+      color: white;
+      text-align: center;
+      padding: 14px 0;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #cbdde9;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE SEDIKIT */
+    @media (max-width: 768px) {
+
+      section,
+      aside {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Portal pink monkey — Berita Koding Lucu Tapi slay &#128526; &#11088;</h1>
+    <p>"Di mana bug bukan musuh, tapi guru kehidupan."&#128133;</p>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#">Berita Utama</a>
+    <a href="#">Fakta Unik</a>
+    <a href="#">Video & Iframe</a>
+    <a href="#">Kontak Redaksi</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <section>
+      <article>
+        <h2>pink monkey Tertangkap Basah Ngoding Jam 3 Pagi Demi Push ke GitHub</h2>
+        <img src="https://exampllee.vercel.app/assets/G05.gif" alt="Fulan ngoding malam">
+        <p><strong>Jakarta, Portal pink monkey —</strong> Warga sekitar dikagetkan dengan suara ketikan keyboard yang tak kunjung berhenti. Setelah diselidiki, ternyata sumber suara berasal dari kamar pink monkey yang sedang men-deploy project-nya ke Vercel.</p>
+
+        <p>"Aku cuma mau pastiin web-nya responsif sebelum tidur," ujar pink monkey sambil menutup laptop dengan wajah bangga dan jam menunjukkan pukul 03:12 WIB.</p>
+
+        <h3>Fakta Koding pink monkey:</h3>
+        <ul>
+          <li>Suka debugging sambil dengerin musik stray kids &#129517; &#127911;</li>
+          <li>Pernah lupa <code>console.log</code> jadi penyebab bug</li>
+          <li>Setiap error dianggap "ujian cinta terhadap sintaks"</li>
+        </ul>
+
+        <h3>Top 3 Error Paling Sering Ditemui:</h3>
+        <ol>
+          <li>Missing semicolon (;) setelah jam 2 pagi</li>
+          <li>Path image gak kebaca di deploy</li>
+          <li>"Cannot read property 'undefined' of undefined" — klasik!</li>
+        </ol>
+
+        <h3>Daftar Konsumsi Lembur pink monkey:</h3>
+        <table>
+          <tr>
+            <th>No</th>
+            <th>Menu</th>
+            <th>Jam Konsumsi</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>pisang bakar</td>
+            <td>22:00</td>
+            <td>Habis</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>pisang ijo</td>
+            <td>00:30</td>
+            <td>Pending (kegigit error)</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>pisang goreng</td>
+            <td>02:00</td>
+            <td>Belum disentuh</td>
+          </tr>
+        </table>
+
+        <blockquote>
+          “Kalau koding gagal, bukan berarti kamu gagal. Mungkin cuma belum di-save.” &#129402;
+        </blockquote>
+
+        <h3>mencari referensi di wikipedia</h3>
+        <iframe src="https://www.wikipedia.org/" title="referensi"></iframe>
+      </article>
+    </section>
+
+    <!-- ASIDE -->
+    <aside>
+      <h2>Fakta Unik Tentang pink monkey</h2>
+      <ul>
+        <li>Ngoding always ditemenin pisang.</li>
+        <li>suka ngoding dimana aja.</li>
+        <li>Pernah gak mood ngoding karna gak ada pisang yang nemenin.</li>
+      </ul>
+
+      <h3>Jadwal Kegiatan Harian</h3>
+      <table>
+        <tr>
+          <th>Waktu</th>
+          <th>Kegiatan</th>
+        </tr>
+        <tr>
+          <td>08:00</td>
+          <td>bangun dan siap siap aktivitas</td>
+        </tr>
+        <tr>
+          <td>13:00</td>
+          <td>nyantai sambil liat projek</td>
+        </tr>
+        <tr>
+          <td>21:00</td>
+          <td>Debug sampai lupa waktu</td>
+        </tr>
+      </table>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Hubungi redaksi: <a href="mailto:redaksi@portalpinkmonkey.id">redaksi@portalpinkmonkey.id</a></p>
+    <p><a href="#">Kembali ke atas</a></p>
+    <p>© 2025 Portal pinkmonkey — Semua bug milik bersama</p>
+  </footer>
+</body>
+
+</html>
