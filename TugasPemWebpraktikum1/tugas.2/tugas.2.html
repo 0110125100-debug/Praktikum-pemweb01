@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list sederhana</title>
+</head>
+<body>
+    <input id="input" type ="text" placeholder="isi item">
+
+    <button onclick="tambah()">Tambah Item</button>
+    <button onclick="hapus()">Hapus Terakhir</button>
+
+    <ul id="list"></ul>
+    
+    <script>
+        function tambah(){
+            const teks = document.getElementById("input").value;
+            if(!teks) return;
+            const li = document.createElement("li");
+            li.innerHTML = teks;
+            document.getElementById("list").appendChild(li);
+            document.getElementById("input").value = "";
+        }
+            
+        function hapus(){
+            const list = document.getElementById("list");
+            list.removeChild(list.lastElementChild);
+        }
+
+        
+    </script>
+</body>
+</html>

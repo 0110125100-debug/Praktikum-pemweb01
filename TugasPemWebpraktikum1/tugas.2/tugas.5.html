@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi dengan Animasi Chaining</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #26fdef;
+            margin: 200px;
+            padding: 50px;
+            position: relative;
+        }
+        .notifikasi {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            padding: 20px;
+            background-color: transparent; /* Awal transparan */
+            color: #000;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            z-index: 1000;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notifikasi dengan Animasi Chaining</h1>
+    <button id="tampilkan">Tampilkan Notifikasi</button>
+    <div class="notifikasi" id="notif">
+        Ini adalah notifikasi dengan animasi notifnya!
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#tampilkan').click(function() {
+                const $notif = $('#notif');
+                
+                
+                $notif.css({
+                    top: '-100px',
+                    opacity: 0,
+                    backgroundColor: 'transparent'
+                }).show(); 
+                
+                
+                $notif
+                    .animate({ backgroundColor: '#ffff00' }, 300) 
+                    .animate({ opacity: 1 }, 500) 
+                    .animate({ top: '20px' }, 500) 
+                    .delay(3000) 
+                    .animate({ top: '-100px' }, 500) 
+                    .animate({ opacity: 0 }, 500, function() {
+                        
+                        $notif.hide(); 
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

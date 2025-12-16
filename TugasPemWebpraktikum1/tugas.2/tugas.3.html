@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Interaktif</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body
+        
+        {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .faq {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .question {
+            background-color: #f4f4f4;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ Interaktif</h1>
+    <div class="faq">
+        <div class="question">Apa itu Sekolah Tinggi Terpadu Nurul Fikri?</div>
+        <div class="answer">Sekolah Tinggi Terpadu Nurul Fikri adalah institusi pendidikan tinggi swasta yang berlokasi di Indonesia, didirikan untuk menyediakan pendidikan berkualitas dalam bidang akademik dan vokasi. Misi utamanya adalah mencetak lulusan yang kompeten, berakhlak mulia, dan siap berkontribusi bagi masyarakat.</div>
+        
+        <div class="question">Program studi apa aja yang ditawarkan di  Nurul Fikri?</div>
+        <div class="answer">Sekolah Tinggi Terpadu Nurul Fikri menawarkan berbagai program studi di tingkat sarjana (S1) Teknik Informatika, Sistem Informasi, dan Bisnis Digital.</div>
+        
+        <div class="question">Bagaimana cara mendaftar sebagai mahasiswa baru di Sekolah Tinggi Terpadu Nurul Fikri?</div>
+        <div class="answer">Pendaftaran mahasiswa baru dilakukan secara online melalui situs nurulfikri.ac.id di halaman "Pendaftaran". Calon mahasiswa perlu mengisi formulir, mengunggah dokumen seperti ijazah dan KTP, serta membayar biaya administrasi.</div>
+        
+        <div class="question">Dimana letak Kampus STT TERPADU Nurul Fikri?</div>
+        <div class="answer">Kampus A : Jl. Situ Indah 116, Tugu, Cimanggis, Depok, Jawa Barat. Kampus B: Jl. Raya Lenteng Agung No.20-21, RT.4/RW.1, Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan,</div>
+        
+        <div class="question">Bagaimana cara menghubungi Universitas Nurul Fikri untuk informasi lebih lanjut?</div>
+        <div class="answer">Anda bisa menghubungi melalui email di info@nurulfikri.ac.id atau telepon Whatsapp: 0857.1624.3174.</div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            
+            $('.question').click(function(){
+                $(this).next('.answer').toggle();
+            });
+            
+            
+            $('.question').hover(
+                function(){
+                    $(this).css('color', 'blue');
+                },
+                function(){
+                    $(this).css('color', '');
+                }
+            );
+        });
+    </script>
+</body>
+</html>
