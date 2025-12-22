@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5 - Rantai Metode jQuery</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #e9b2c8;
+        }
+        #notification {
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+            color: rgb(220, 9, 100);
+            background-color: #ae4e73; 
+            border-radius: 5px;
+            display: none; 
+            opacity: 0;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Notifikasi Animasi Chaining</h2>
+    <button id="show-btn">Tampilkan Notifikasi</button>
+
+    <div class="container">
+        <div id="notification">
+            Apa Kabar      
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#show-btn").click(function(){
+                $("#notification").stop(true).css({"background-color": "#4CAF50", "display": "none", "opacity": 0});
+
+                $("#notification")
+                    .css("background-color", "green") 
+                    .animate({opacity: 1, height: 'toggle'}, {duration: 600, specialEasing: {opacity: 'linear', height: 'swing'}}) // Memudar masuk & Meluncur ke bawah (menampilkan elemen)
+                    .delay(3000) // Menunggu 3 detik
+                    .animate({opacity: 0, height: 'toggle'}, {duration: 600, specialEasing: {opacity: 'linear', height: 'swing'}}); // Memudar keluar & Meluncur ke atas (menyembunyikan elemen)
+
+                $("h2").hide( "slow", function (){});//fungsi hide utuk menyambunyikan teks
+                $("h2").show(2000)("slow", function (){});//fungdi show untuk memunculkan teks
+                alert("")
+            });
+        });
+    </script>
+
+</body>
+</html>

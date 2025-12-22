@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Dinamis DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:  #e9b2c8;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgb(238, 219, 230);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .biodata-card {
+            border: 1px solid #621a37;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        #fotoProfil {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .info {
+            flex-grow: 1;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #621a37;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(255, 0, 123);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Biodata Mahasiswa</h1>
+        
+        <div id="biodataCard" class="biodata-card">
+            <img id="fotoProfil" src="fotoprofile.jpg">
+            <div class="info">
+                <p>Nama: <strong id="namaMahasiswa">Nazka Khaulah Syahidah</strong></p>
+                <p>NIM: <strong id="nimMahasiswa">0110125100</strong></p>
+                <p>Program Studi: <strong id="prodiMahasiswa">sistem informasi</strong></p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="ubahNama()">Ubah Nama</button>
+            <button onclick="ubahProdi()">Ubah Program Studi</button>
+            <button onclick="gantiFoto()">Ganti Foto</button>
+            <button onclick="sembunyikanBiodata()">Sembunyikan Biodata</button>
+            <button onclick="tampilkanBiodata()">Tampilkan Biodata</button>
+        </div>
+    </div>
+
+    <script>
+
+        let currentName = "Nazka Khaulah Syahidah";
+        let currentProdi = "Sistem Informasi"; 
+        const defaultPhotoUrl = "fotoprofile.jpg";
+        const newPhotoUrl = "fotoprofile.jpg";
+        let isDefaultPhoto = true;
+
+
+        function ubahNama() {
+           
+            currentName = prompt(" nama baru:", currentName);
+            if (currentName) {
+                document.getElementById('namaMhs').innerHTML = currentName
+            }       
+        }
+
+        function ubahProdi() {
+           
+            currentProdi = prompt("Masukkan program studi baru:", currentProdi);
+            if (currentProdi) {
+                document.getElementById('prodiMhs').innerHTML = currentProdi;
+            } 
+        }
+
+        function gantiFoto() {
+          
+            const fotoElement = document.getElementById('fotoProfil');
+            if (isDefaultPhoto) {
+                fotoElement.setAttribute('src', newPhotoUrl);
+                isDefaultPhoto = false;
+            } else {
+                fotoElement.setAttribute('src', defaultPhotoUrl);
+                isDefaultPhoto = true;
+            }
+        }
+
+        function sembunyikanBiodata() {
+            
+            document.getElementById('biodataCard').style.display = 'none';
+        }
+
+        function tampilkanBiodata() {
+
+            document.getElementById('biodataCard').style.display = 'flex';
+        }
+
+        
+        window.onload = function() {
+            document.getElementById('namaMahasiswa').innerHTML = currentName;
+            document.getElementById('nimMahasiswa').innerHTML = "0110125100"; // NIM statis
+            document.getElementById('prodiMahasiswa').innerHTML = currentProdi;
+            document.getElementById('fotoProfil').setAttribute('src', defaultPhotoUrl);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 - FAQ Interaktif jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:  #e9b2c8;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .faq-container {
+            margin-top: 20px;
+        }
+        .question {
+            background-color: rgb(255, 205, 235);
+            padding: 15px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    
+        .question-hover {
+            background-color: #621a37;
+            color: white;
+        }
+        .answer {
+            background-color: #e9e9e9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: none; 
+        }
+        .arrow {
+            float: right;
+            transition: transform 0.3s;
+        }
+        .expanded .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ Interaktif</h1>
+
+    <div class="faq-container">
+        <div class="question" id="q1">
+            Apa itu jQuery? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            jQuery adalah kumpulan kode siap pakai (library) JavaScript yang menyederhanakan pembuatan website interaktif, mulai dari mengatur elemen HTML hingga membuat animasi, dengan cara meringkas perintah yang panjang menjadi lebih pendek dan mudah ditulis
+        </div>
+
+        <div class="question" id="q2">
+            Bagaimana cara menggunakan .click() di jQuery? <span class="arrow">▶</span>
+        </div>
+
+        <div class="answer">
+            Metode .click() dalam jQuery adalah fungsi yang digunakan untuk menangkap interaksi klik pengguna pada elemen HTML tertentu dan menjalankan serangkaian kode (fungsi) sebagai responsnya. Cara kerjanya dimulai dengan menentukan target menggunakan selektor, seperti $("#id") atau $(".class"), lalu diikuti dengan .click(function(){ ... }) di mana semua logika atau efek yang ingin dimunculkan diletakkan di dalam kurung kurawal tersebut. 
+        </div>
+
+        <div class="question" id="q3">
+             Apa fungsi dari .toggle()? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            Metode .toggle() dalam jQuery berfungsi sebagai saklar otomatis untuk menampilkan atau menyembunyikan elemen secara bergantian hanya dengan satu perintah. Jika elemen tersebut sedang terlihat, maka .toggle() akan menyembunyikannya (seperti .hide()), dan jika elemen sedang tersembunyi, maka ia akan menampilkannya kembali (seperti .show()). Fitur ini sangat praktis karena kamu tidak perlu mengecek status elemen secara manual menggunakan logika if-else untuk membuat interaksi sederhana seperti menu buka-tutup atau tombol tampilkan detail.     
+           </div>
+        
+        <div class="question" id="q4">
+            Apa perbedaan antara .hover() dan CSS :hover? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            Perbedaan utamanya adalah CSS :hover hanya digunakan untuk perubahan tampilan visual yang sederhana dan otomatis, sedangkan jQuery .hover() adalah sebuah fungsi yang memungkinkan kamu menjalankan logika atau aksi yang lebih kompleks (seperti animasi atau manipulasi data) saat kursor masuk dan keluar dari suatu elemen. Singkatnya, gunakan CSS untuk urusan gaya dan jQuery jika kamu memerlukan interaksi atau perintah khusus.     
+           </div>
+
+        <div class="question" id="q5">
+            Apakah jQuery masih relevan di tahun ini? <span class="arrow">▶</span>
+        </div>
+        <div class="answer">
+            masih, jQuery masih sangat relevan di tahun 2025 karena ia masih digunakan oleh lebih dari 75% dari 10 juta situs web teratas di dunia. Meskipun teknologi baru seperti React atau Vue lebih populer untuk aplikasi skala besar, jQuery tetap menjadi pilihan utama untuk pengembangan WordPress, pemeliharaan situs web lama (legacy), dan proyek-proyek sederhana yang membutuhkan interaksi cepat tanpa kerumitan konfigurasi teknis yang tinggi. Keunggulannya dalam menangani kompatibilitas antar-browser secara instan dan sintaksnya yang sangat mudah dipahami menjadikannya alat belajar yang tetap berharga bagi pengembang pemula  
+              </div>
+    <script src="script.js"></script>
+<div></div>
+</body>
+</html>
